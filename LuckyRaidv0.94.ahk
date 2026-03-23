@@ -11,7 +11,7 @@ SetMouseDelay -1
 
 global CORDS := Map(
     "AutoRaid",  [296, 531],   
-    "Lever",     [525, 500],
+    "Lever",     [511, 496],
     "OkayBtn",   [734, 741] 
 )
 
@@ -36,7 +36,10 @@ global CLICK_AREA := Map(
 ; HOTKEYS
 ; PERSONAL PREFERENCE - USE THE KEYBINDS YOU WANT
 
-F8:: ExitApp
+F8:: {
+    global toggle
+    toggle := !toggle
+}
 
 F5:: {
 
