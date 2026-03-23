@@ -11,7 +11,7 @@ SetMouseDelay -1
 
 global CORDS := Map(
     "AutoRaid",  [296, 531],   
-    "Lever",     [525, 496],
+    "Lever",     [525, 500],
     "OkayBtn",   [734, 741] 
 )
 
