@@ -40,7 +40,7 @@ global CLICK_AREA := Map(
 ; PERSONAL PREFERENCE - USE THE KEYBINDS YOU WANT
 
 F8:: ExitApp
-}
+
 
 F5:: {
 
