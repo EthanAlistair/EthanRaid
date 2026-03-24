@@ -36,6 +36,13 @@ global CLICK_AREA := Map(
     "y2", 545   ; bottom bound
 )
 
+global CLICK_LEVER := Map(
+    "x1", 440,  ; left bound
+    "y1", 540,  ; top bound
+    "x2", 490,  ; right bound
+    "y2", 580   ; bottom bound
+)
+
 ; HOTKEYS
 ; PERSONAL PREFERENCE - USE THE KEYBINDS YOU WANT
 
@@ -65,14 +72,14 @@ runRaidLoop() {
     ; autoclicker during raid
     Sleep RAID_DOWNTIME
 
-    ; click lever
-    clickSpot(CORDS["Lever"], 500)
-    clickSpot(CORDS["Lever2"], 500)
-    clickSpot(CORDS["Lever3"], 500)
 
     ; turn off autoraid
     Send "{q}"
     Sleep 1000
+
+    ; spam click lever
+    randomClickArea(CLICK_LEVER, 2000)
+    clickSpotPos(CLICK_AREA["x1"], CLICK_AREA["y1"], 0)
 
     ; close mythic menu if opened
     clickSpot(CORDS["Mythic"], 1000)
@@ -108,11 +115,22 @@ runRaidLoop() {
 ; utils
 
 clickSpot(coords, wait) {
-    SendEvent "{Click, " coords[1] ", " coords[2] ", 100}"
+    SendEvent "{Click, " coords[1] ", " coords[2] ", 1}"
     Sleep wait
 }
 
 clickSpotPos(x, y, wait) {
     SendEvent "{Click, " x ", " y ", 1}"
     Sleep wait
+}
+
+; Randomly autoclicker
+randomClickArea(area, duration) {
+    deadline := A_TickCount + duration
+    while (A_TickCount < deadline) {
+        rx := Random(area["x1"], area["x2"])
+        ry := Random(area["y1"], area["y2"])
+        SendEvent "{Click, " rx ", " ry ", 1}"
+        Sleep (0) ; random delay between clicks so it looks natural
+    }
 }
