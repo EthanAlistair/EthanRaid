@@ -108,7 +108,7 @@ runRaidLoop() {
 ; utils
 
 clickSpot(coords, wait) {
-    SendEvent "{Click, " coords[1] ", " coords[2] ", 1}"
+    SendEvent "{Click, " coords[1] ", " coords[2] ", 100}"
     Sleep wait
 }
 
