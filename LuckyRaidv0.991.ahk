@@ -106,7 +106,7 @@ runRaidLoop() {
     Sleep BOSS_KILL
 
     ; click autoraid to restart
-    clickSpot(CORDS["AutoRaid"], 0)
+    clickSpot(CORDS["AutoRaid"], 500)
     Sleep AUTO_DELAY
     Sleep LOADING_SCREEN
 
