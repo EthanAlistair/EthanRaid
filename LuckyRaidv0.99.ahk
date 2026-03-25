@@ -15,16 +15,16 @@ global CORDS := Map(
     "Lever2",     [478, 506],
     "Lever3",     [493, 517],
     "OkayBtn",   [734, 741],
-    "Mythic",    [780 , 741],
+    "Mythic",    [955 , 741],
 ) 
 
 ; CHANGE DEPENDING ON YOUR RAID SPEED AND LOADING TIMES
 global WALK_DOOR  := 3000 ; 3 seconds
 global WALK_BOSS := 2.500 ; 2.5 seconds
-global BOSS_KILL := 25000 ; 25 seconds - CHANGE THIS DEPENDING ON YOUR KILL TIME
-global RAID_DOWNTIME := 27000 ; 27 seconds- CHANGE THIS DEPENDING ON YOUR RAID TIME
+global BOSS_KILL := 7000 ; 25 seconds - CHANGE THIS DEPENDING ON YOUR KILL TIME
+global RAID_DOWNTIME := 28000 ; 28 seconds- CHANGE THIS DEPENDING ON YOUR RAID TIME
 global AUTO_DELAY := 4000 ; 4 seconds
-global LOADING_SCREEN := 4000 ; 4 seconds - CHANGE THIS DEPENDING ON YOUR LOADING SCREEN TIME
+global LOADING_SCREEN := 5000 ; 4 seconds - CHANGE THIS DEPENDING ON YOUR LOADING SCREEN TIME
 
 global toggle := false
 
