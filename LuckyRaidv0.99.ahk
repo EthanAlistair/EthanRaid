@@ -20,7 +20,7 @@ global CORDS := Map(
 
 ; CHANGE DEPENDING ON YOUR RAID SPEED AND LOADING TIMES
 global WALK_DOOR  := 3000 ; 3 seconds
-global WALK_BOSS := 2.500 ; 2.5 seconds
+global WALK_BOSS := 2500 ; 2.5 seconds
 global BOSS_KILL := 7000 ; 25 seconds - CHANGE THIS DEPENDING ON YOUR KILL TIME
 global RAID_DOWNTIME := 28000 ; 28 seconds- CHANGE THIS DEPENDING ON YOUR RAID TIME
 global AUTO_DELAY := 4000 ; 4 seconds
@@ -82,7 +82,7 @@ runRaidLoop() {
     clickSpotPos(CLICK_AREA["x1"], CLICK_AREA["y1"], 0)
 
     ; close mythic menu if opened
-    clickSpot(CORDS["Mythic"], 1000)
+    clickSpot(CORDS["Mythic"], 500)
 
     ; walk right
     Send "{d down}"
